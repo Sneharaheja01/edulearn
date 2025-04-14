@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EduLearn - Online Courses</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+    body { background: #f9f9f9; }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    .hero {
+      background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+      color: black;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h1 { font-size: 48px; }
+    .hero p { margin-top: 10px; font-size: 20px; }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .courses {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .course-card {
+      background: white;
+      padding: 20px;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .course-card:hover {
+      transform: scale(1.03);
+    }
+
+    .course-card img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background: #2c3e50;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h2>EduLearn</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <h1>Empower Your Learning</h1>
+    <p>Join thousands of students learning new skills online</p>
+  </section>
+
+  <!-- Courses -->
+  <section id="courses">
+   <b> <h2>Our Courses</h2></b>
+    <div class="courses">
+      <div class="course-card">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/1*V-Jp13LvtVc2IiY2fp4qYw.jpeg" />
+        <h3>Web Development</h3>
+        <p>Learn to build modern websites using HTML, CSS, JS.</p>
+      </div>
+      <div class="course-card">
+        <img src="https://www.ntuclearninghub.com/documents/39367/7431407/python-programming%20fundamentals.jpg/0f980a00-ced6-85e7-3d57-fa1651dd572b/" />
+        <h3>Python Programming</h3>
+        <p>Master Python from basics to advanced level.</p>
+      </div>
+      <div class="course-card">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/5/SS/NP/NC/100811779/title-image-4-80465274aebb5-jpg-500x500.jpg" />
+        <h3>Graphic Design</h3>
+        <p>Create stunning visuals with Photoshop & Illustrator.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 EduLearn. All rights reserved.</p>
+  </footer>
+
+  <!-- Little JS -->
+  <script>
+        // Alert on form submit
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you for reaching out!");
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
